@@ -1,0 +1,41 @@
+.contact-action {
+  position: relative;
+  display: inline-flex;
+}
+
+.contact-action__notice {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  z-index: var(--z-dropdown);
+  width: max-content;
+  max-width: min(300px, 80vw);
+  padding: 10px 14px;
+  background: var(--color-navy);
+  color: #fff;
+  font-size: var(--text-xs);
+  line-height: var(--leading-snug);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  animation: fadeIn var(--transition-fast) both;
+}
+
+.contact-action__notice::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 22px;
+  width: 10px;
+  height: 10px;
+  background: var(--color-navy);
+  transform: rotate(45deg);
+}
+
+.contact-action--block {
+  display: flex;
+  width: 100%;
+}
+
+.contact-action--block > .btn {
+  width: 100%;
+}

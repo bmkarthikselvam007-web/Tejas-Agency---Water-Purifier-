@@ -1,0 +1,138 @@
+/**
+ * Tejas Agency — Design System Tokens
+ * Single source of truth for colours, spacing, typography and elevation.
+ *
+ * Palette direction: premium white base + deep navy (technology, trust) +
+ * cyan/turquoise (purity, water), with purple as a refined secondary accent
+ * and the logo's orange used sparingly for brand highlights.
+ * Surfaces stay light and airy; every text colour below is chosen to stay
+ * readable on the surface it is used on.
+ */
+
+:root {
+  /* ---------- Cyan / turquoise: the primary brand colour ---------- */
+  --color-primary: #0d7d92;        /* readable on white — links, buttons, icons */
+  --color-primary-dark: #0a5f70;
+  --color-primary-darker: #07454f;
+  --color-primary-bright: #22bedc;  /* logo turquoise — highlights on dark only */
+  --color-primary-soft: #e2f6fa;
+  --color-primary-softer: #f3fbfd;
+
+  /* ---------- Deep navy: technology and trust ---------- */
+  --color-navy: #0a2540;
+  --color-navy-soft: #14395c;
+  --color-navy-deep: #071a2e;
+  --color-charcoal: #17263a;
+
+  /* ---------- Purple: refined secondary accent (ionizer range) ---------- */
+  --color-accent: #6f54bd;
+  --color-accent-dark: #57409a;
+  --color-accent-bright: #b388f0;   /* logo purple — decorative use */
+  --color-accent-soft: #f1ecfd;
+
+  /* ---------- Logo orange: brand highlight, used sparingly ---------- */
+  --color-brand: #d9822b;
+  --color-brand-dark: #b4691f;
+  --color-brand-soft: #fdf3e7;
+
+  /* ---------- Surfaces ---------- */
+  --color-background: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-soft: #f5fafc;
+  --color-surface-muted: #e8f1f6;
+  --color-overlay: rgba(10, 37, 64, 0.55);
+
+  /* ---------- Text ---------- */
+  --color-text: #17263a;
+  --color-text-strong: #0a2540;
+  --color-muted: #51667d;
+  --color-muted-light: #7b90a5;
+  --color-on-dark: #ffffff;
+  --color-on-dark-muted: #d3e6f2;
+  --color-on-dark-accent: #7fdcef;
+
+  /* ---------- Lines & states ---------- */
+  --color-border: #dce8ef;
+  --color-border-strong: #bcd2de;
+  --color-success: #0f7a58;
+  --color-success-soft: #e6f5ef;
+  --color-danger: #c0392b;
+  --color-danger-soft: #fdeceb;
+  --color-star: #e0a11c;
+  --color-whatsapp: #25d366;
+  --color-whatsapp-dark: #1da851;
+  --color-instagram: #c13584;
+
+  /* ---------- Radius ---------- */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 22px;
+  --radius-pill: 999px;
+
+  /* ---------- Elevation (kept deliberately subtle) ---------- */
+  --shadow-xs: 0 1px 2px rgba(10, 37, 64, 0.05);
+  --shadow-sm: 0 2px 8px rgba(10, 37, 64, 0.06);
+  --shadow-md: 0 8px 24px rgba(10, 37, 64, 0.08);
+  --shadow-lg: 0 18px 44px rgba(10, 37, 64, 0.12);
+
+  /* ---------- Spacing scale ---------- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+
+  /* ---------- Typography ---------- */
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+
+  --text-xs: 0.75rem;     /* 12 */
+  --text-sm: 0.875rem;    /* 14 */
+  --text-base: 1rem;      /* 16 */
+  --text-md: 1.0625rem;   /* 17 */
+  --text-lg: 1.25rem;     /* 20 */
+  --text-xl: 1.5rem;      /* 24 */
+  --text-2xl: 1.875rem;   /* 30 */
+  --text-3xl: 2.25rem;    /* 36 */
+  --text-4xl: 2.75rem;    /* 44 */
+
+  --leading-tight: 1.2;
+  --leading-snug: 1.35;
+  --leading-normal: 1.6;
+  --leading-relaxed: 1.75;
+
+  /* ---------- Layout ---------- */
+  --container-width: 1200px;
+  --container-narrow: 880px;
+  --container-padding: 20px;
+  --header-height: 76px;
+  --mobile-cta-height: 64px;
+
+  /* ---------- Motion ---------- */
+  --transition-fast: 150ms ease;
+  --transition-base: 220ms ease;
+  --transition-slow: 360ms ease;
+
+  /* ---------- Z-index ---------- */
+  --z-header: 100;
+  --z-dropdown: 110;
+  --z-drawer: 120;
+  --z-sticky-cta: 90;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --container-padding: 16px;
+    --header-height: 66px;
+    --text-3xl: 1.875rem;
+    --text-4xl: 2.125rem;
+  }
+}

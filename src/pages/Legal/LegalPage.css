@@ -1,0 +1,15 @@
+.legal-body {
+  display: grid;
+  gap: var(--space-8);
+}
+
+.legal-body h2 {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-3);
+}
+
+.legal-body p {
+  margin: 0;
+  color: var(--color-muted);
+  line-height: var(--leading-relaxed);
+}

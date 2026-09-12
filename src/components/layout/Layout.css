@@ -1,0 +1,58 @@
+.site-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.site-main {
+  flex: 1;
+}
+
+/* Shared page hero used by the inner pages */
+.page-hero {
+  padding-block: var(--space-12) var(--space-12);
+  background: linear-gradient(180deg, var(--color-primary-softer), #ffffff);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.page-hero--navy {
+  background: linear-gradient(160deg, var(--color-navy), var(--color-navy-soft));
+  border-bottom: 0;
+  color: var(--color-on-dark-muted);
+}
+
+.page-hero--navy h1 {
+  color: #fff;
+}
+
+.page-hero__inner {
+  display: grid;
+  gap: var(--space-5);
+  max-width: 760px;
+}
+
+.page-hero__title {
+  margin: 0;
+}
+
+.page-hero__description {
+  margin: 0;
+  font-size: var(--text-md);
+  line-height: var(--leading-relaxed);
+  color: var(--color-muted);
+}
+
+.page-hero--navy .page-hero__description {
+  color: var(--color-on-dark-muted);
+}
+
+.page-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+.page-hero__breadcrumbs {
+  margin-bottom: var(--space-6);
+}

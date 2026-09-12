@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" width="800" height="560" role="img">
+
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f3fbfd"/>
+      <stop offset="1" stop-color="#e2f6fa"/>
+    </linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.55" stop-color="#f7fafd"/>
+      <stop offset="1" stop-color="#e9f0f7"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4fc9e0" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#159fbd" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#14395c"/>
+      <stop offset="1" stop-color="#0a2540"/>
+    </linearGradient>
+    <linearGradient id="copper" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#dda15e"/>
+      <stop offset="1" stop-color="#b87333"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b388f0"/>
+      <stop offset="1" stop-color="#7c5ac7"/>
+    </linearGradient>
+
+  </defs>
+
+  <rect width="800" height="560" fill="url(#bg)"/>
+  <circle cx="656" cy="100.8" r="123.2" fill="#ffffff" opacity="0.55"/>
+  <circle cx="128" cy="459.2" r="145.6" fill="#ffffff" opacity="0.4"/>
+  <path d="M0 560 L0 414.4 Q 200 358.40000000000003 400 403.2 T 800 380.8 L800 560 Z" fill="#cdeef5" opacity="0.45"/>
+
+  <path transform="translate(690 110) scale(1.2)" fill="#0d7d92" opacity="0.22"
+    d="M0 -26 C 12 -8 20 2 20 11 A 20 20 0 0 1 -20 11 C -20 2 -12 -8 0 -26 Z"/>
+  <g>
+    <rect x="118" y="120" width="230" height="360" rx="26" fill="url(#body)" stroke="#cbdfe8" stroke-width="3"/>
+    <rect x="118" y="120" width="230" height="96" rx="26" fill="url(#panel)"/>
+    <rect x="118" y="186" width="230" height="30" fill="url(#panel)"/>
+    <circle cx="152" cy="168" r="9" fill="#ffb347"/>
+    <rect x="150" y="258" width="166" height="150" rx="16" fill="#ffffff" stroke="#cbdfe8" stroke-width="3"/>
+    <path d="M153 348 h160 v44 a16 16 0 0 1 -16 16 h-128 a16 16 0 0 1 -16 -16 Z" fill="url(#water)" opacity="0.8"/>
+    <rect x="150" y="434" width="120" height="12" rx="6" fill="#e8f1f6"/>
+  </g>
+  <g transform="translate(430 150)">
+    <rect x="0" y="60" width="250" height="270" rx="18" fill="#ffffff" stroke="#cbdfe8" stroke-width="3"/>
+    <rect x="0" y="60" width="250" height="52" rx="18" fill="url(#panel)"/>
+    <rect x="0" y="94" width="250" height="18" fill="url(#panel)"/>
+    <rect x="28" y="146" width="90" height="90" rx="12" fill="#e2f6fa" stroke="#cbdfe8" stroke-width="2"/>
+    <rect x="136" y="146" width="90" height="40" rx="10" fill="#e2f6fa" stroke="#cbdfe8" stroke-width="2"/>
+    <rect x="136" y="196" width="90" height="40" rx="10" fill="#e2f6fa" stroke="#cbdfe8" stroke-width="2"/>
+    <rect x="28" y="262" width="198" height="12" rx="6" fill="#e8f1f6"/>
+    <rect x="28" y="288" width="128" height="12" rx="6" fill="#e8f1f6"/>
+  </g>
+  <g transform="translate(548 336) rotate(35)">
+    <rect x="-10" y="0" width="20" height="118" rx="8" fill="#14395c"/>
+    <path d="M-26 -34 a 30 30 0 1 0 52 0 l -14 16 h-24 Z" fill="#0a5f70"/>
+  </g>
+</svg>

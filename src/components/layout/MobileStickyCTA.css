@@ -1,0 +1,31 @@
+.mobile-cta {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: var(--z-sticky-cta);
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3)
+    calc(var(--space-2) + env(safe-area-inset-bottom, 0px));
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid var(--color-border);
+  box-shadow: 0 -4px 16px rgba(11, 34, 57, 0.08);
+}
+
+.mobile-cta .contact-action,
+.mobile-cta > .btn {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.mobile-cta .btn {
+  padding-block: 12px;
+}
+
+@media (max-width: 768px) {
+  .mobile-cta {
+    display: flex;
+  }
+}

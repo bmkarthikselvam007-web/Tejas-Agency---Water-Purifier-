@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" width="800" height="560" role="img">
+
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f3fbfd"/>
+      <stop offset="1" stop-color="#e2f6fa"/>
+    </linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.55" stop-color="#f7fafd"/>
+      <stop offset="1" stop-color="#e9f0f7"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4fc9e0" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#159fbd" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#14395c"/>
+      <stop offset="1" stop-color="#0a2540"/>
+    </linearGradient>
+    <linearGradient id="copper" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#dda15e"/>
+      <stop offset="1" stop-color="#b87333"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b388f0"/>
+      <stop offset="1" stop-color="#7c5ac7"/>
+    </linearGradient>
+
+  </defs>
+  <rect width="800" height="560" fill="url(#bg)"/>
+  <rect x="0" y="452" width="800" height="108" fill="#e8f1f6"/>
+  <rect x="70" y="130" width="660" height="14" rx="6" fill="#cbdfe8" opacity="0.7"/>
+  <rect x="70" y="238" width="660" height="14" rx="6" fill="#cbdfe8" opacity="0.7"/>
+  <rect x="70" y="346" width="660" height="14" rx="6" fill="#cbdfe8" opacity="0.7"/>
+  <rect x="100" y="46" width="72" height="84" rx="14" fill="url(#body)" stroke="#cbdfe8" stroke-width="2"/><rect x="100" y="46" width="72" height="24" rx="12" fill="url(#panel)"/><rect x="228" y="46" width="72" height="84" rx="14" fill="url(#body)" stroke="#cbdfe8" stroke-width="2"/><rect x="228" y="46" width="72" height="24" rx="12" fill="url(#panel)"/><rect x="356" y="46" width="72" height="84" rx="14" fill="url(#body)" stroke="#cbdfe8" stroke-width="2"/><rect x="356" y="46" width="72" height="24" rx="12" fill="url(#panel)"/><rect x="484" y="46" width="72" height="84" rx="14" fill="url(#body)" stroke="#cbdfe8" stroke-width="2"/><rect x="484" y="46" width="72" height="24" rx="12" fill="url(#panel)"/><rect x="612" y="46" width="72" height="84" rx="14" fill="url(#body)" stroke="#cbdfe8" stroke-width="2"/><rect x="612" y="46" width="72" height="24" rx="12" fill="url(#panel)"/>
+  <rect x="100" y="154" width="72" height="84" rx="14" fill="url(#body)" stroke="#cbdfe8" stroke-width="2"/><rect x="100" y="154" width="72" height="24" rx="12" fill="url(#panel)"/><rect x="228" y="154" width="72" height="84" rx="14" fill="url(#body)" stroke="#cbdfe8" stroke-width="2"/><rect x="228" y="154" width="72" height="24" rx="12" fill="url(#accent)"/><rect x="356" y="154" width="72" height="84" rx="14" fill="url(#body)" stroke="#cbdfe8" stroke-width="2"/><rect x="356" y="154" width="72" height="24" rx="12" fill="url(#panel)"/><rect x="484" y="154" width="72" height="84" rx="14" fill="url(#body)" stroke="#cbdfe8" stroke-width="2"/><rect x="484" y="154" width="72" height="24" rx="12" fill="url(#accent)"/><rect x="612" y="154" width="72" height="84" rx="14" fill="url(#body)" stroke="#cbdfe8" stroke-width="2"/><rect x="612" y="154" width="72" height="24" rx="12" fill="url(#panel)"/>
+  <rect x="100" y="262" width="72" height="84" rx="14" fill="url(#body)" stroke="#cbdfe8" stroke-width="2"/><rect x="100" y="262" width="72" height="24" rx="12" fill="url(#panel)"/><rect x="228" y="262" width="72" height="84" rx="14" fill="url(#body)" stroke="#cbdfe8" stroke-width="2"/><rect x="228" y="262" width="72" height="24" rx="12" fill="url(#panel)"/><rect x="356" y="262" width="72" height="84" rx="14" fill="url(#body)" stroke="#cbdfe8" stroke-width="2"/><rect x="356" y="262" width="72" height="24" rx="12" fill="url(#panel)"/><rect x="484" y="262" width="72" height="84" rx="14" fill="url(#body)" stroke="#cbdfe8" stroke-width="2"/><rect x="484" y="262" width="72" height="24" rx="12" fill="url(#panel)"/><rect x="612" y="262" width="72" height="84" rx="14" fill="url(#body)" stroke="#cbdfe8" stroke-width="2"/><rect x="612" y="262" width="72" height="24" rx="12" fill="url(#panel)"/>
+  <rect x="70" y="452" width="660" height="10" rx="5" fill="#cbdfe8"/>
+  <rect x="250" y="482" width="300" height="54" rx="12" fill="#ffffff" stroke="#cbdfe8" stroke-width="3"/>
+</svg>

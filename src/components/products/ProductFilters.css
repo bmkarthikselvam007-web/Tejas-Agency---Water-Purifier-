@@ -1,0 +1,112 @@
+.product-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--space-6);
+  padding: var(--space-5) var(--space-6);
+  margin-bottom: var(--space-8);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.product-filters__group {
+  display: grid;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.product-filters__label {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.product-filters__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.filter-chip {
+  padding: 8px 14px;
+  background: var(--color-surface-soft);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--color-text);
+  transition: all var(--transition-fast);
+}
+
+.filter-chip:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary-dark);
+}
+
+.filter-chip--active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+
+.product-filters__select {
+  padding: 10px 14px;
+  min-width: 200px;
+  font-family: inherit;
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+}
+
+.product-filters__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-left: auto;
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}
+
+.product-filters__clear {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 10px;
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--color-muted);
+}
+
+.product-filters__clear:hover {
+  border-color: var(--color-danger);
+  color: var(--color-danger);
+}
+
+@media (max-width: 900px) {
+  .product-filters {
+    gap: var(--space-5);
+    padding: var(--space-5);
+  }
+  .product-filters__meta {
+    margin-left: 0;
+    width: 100%;
+    justify-content: space-between;
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--color-border);
+  }
+  .product-filters__select {
+    min-width: 0;
+    width: 100%;
+  }
+  .product-filters__group--select {
+    width: 100%;
+  }
+}

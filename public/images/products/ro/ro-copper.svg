@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 640" width="800" height="640" role="img">
+
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f3fbfd"/>
+      <stop offset="1" stop-color="#e2f6fa"/>
+    </linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.55" stop-color="#f7fafd"/>
+      <stop offset="1" stop-color="#e9f0f7"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4fc9e0" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#159fbd" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#14395c"/>
+      <stop offset="1" stop-color="#0a2540"/>
+    </linearGradient>
+    <linearGradient id="copper" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#dda15e"/>
+      <stop offset="1" stop-color="#b87333"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b388f0"/>
+      <stop offset="1" stop-color="#7c5ac7"/>
+    </linearGradient>
+
+  </defs>
+
+  <rect width="800" height="640" fill="url(#bg)"/>
+  <circle cx="656" cy="115.19999999999999" r="140.8" fill="#ffffff" opacity="0.55"/>
+  <circle cx="128" cy="524.8" r="166.4" fill="#ffffff" opacity="0.4"/>
+  <path d="M0 640 L0 473.6 Q 200 409.6 400 460.79999999999995 T 800 435.20000000000005 L800 640 Z" fill="#cdeef5" opacity="0.45"/>
+
+  <path transform="translate(120 140) scale(1.5)" fill="#0d7d92" opacity="0.22"
+    d="M0 -26 C 12 -8 20 2 20 11 A 20 20 0 0 1 -20 11 C -20 2 -12 -8 0 -26 Z"/>
+
+  <path transform="translate(680 470) scale(1.1)" fill="#0a5f70" opacity="0.16"
+    d="M0 -26 C 12 -8 20 2 20 11 A 20 20 0 0 1 -20 11 C -20 2 -12 -8 0 -26 Z"/>
+<ellipse cx="400" cy="566" rx="170" ry="18" fill="#0a2540" opacity="0.10"/>
+  <g>
+    <rect x="268" y="96" width="264" height="450" rx="30" fill="url(#body)" stroke="#cbdfe8" stroke-width="3"/>
+    <rect x="268" y="96" width="264" height="120" rx="30" fill="url(#copper)"/>
+    <rect x="268" y="186" width="264" height="30" fill="url(#copper)"/>
+    <circle cx="316" cy="156" r="9" fill="#6fe3a6"/>
+    <circle cx="344" cy="156" r="9" fill="#ffffff" opacity="0.45"/>
+    <circle cx="372" cy="156" r="9" fill="#ffffff" opacity="0.25"/>
+    <rect x="420" y="140" width="76" height="32" rx="8" fill="#ffffff" opacity="0.16"/>
+    <rect x="304" y="252" width="192" height="196" rx="18" fill="#ffffff" stroke="#cbdfe8" stroke-width="3"/>
+    <path d="M307 372 h186 v58 a16 16 0 0 1 -16 16 h-154 a16 16 0 0 1 -16 -16 Z" fill="url(#water)"/>
+    <path d="M307 372 q 46 -16 93 0 t 93 0 v14 q -46 16 -93 0 t -93 0 Z" fill="#4fc9e0" opacity="0.55"/>
+    <rect x="330" y="286" width="60" height="10" rx="5" fill="#e8f1f6"/>
+    <rect x="330" y="310" width="112" height="10" rx="5" fill="#e8f1f6"/>
+    <rect x="330" y="334" width="86" height="10" rx="5" fill="#e8f1f6"/>
+    <rect x="352" y="470" width="96" height="16" rx="8" fill="#b87333" opacity="0.25"/>
+    <path d="M470 486 h34 a10 10 0 0 1 10 10 v26 h-22 v-16 h-22 Z" fill="#14395c"/>
+    <rect x="486" y="522" width="20" height="26" rx="6" fill="#14395c"/>
+    <path d="M496 556 c 6 8 10 13 10 18 a 10 10 0 0 1 -20 0 c 0 -5 4 -10 10 -18 Z" fill="#159fbd" opacity="0.8"/>
+  </g>
+</svg>

@@ -1,0 +1,109 @@
+.ionization-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-5);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: none;
+}
+
+.ionization-steps__item {
+  padding: var(--space-6);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-top: 3px solid var(--color-accent);
+  border-radius: var(--radius-lg);
+}
+
+.ionization-steps__number {
+  display: inline-block;
+  margin-bottom: var(--space-3);
+  font-size: var(--text-sm);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+}
+
+.ionization-steps__title {
+  margin: 0 0 var(--space-2);
+  font-size: var(--text-base);
+}
+
+.ionization-steps__description {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
+  color: var(--color-muted);
+}
+
+.ionization-note {
+  margin: var(--space-8) 0 0;
+  padding: var(--space-4) var(--space-5);
+  background: var(--color-surface-soft);
+  border-left: 3px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  line-height: var(--leading-relaxed);
+}
+
+.ionizer-specs {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+  gap: var(--space-12);
+  align-items: center;
+}
+
+.ionizer-specs__list {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ionizer-specs__list li {
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  gap: var(--space-3);
+  align-items: center;
+  padding: var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text-strong);
+}
+
+.ionizer-specs__list svg {
+  color: var(--color-accent);
+}
+
+.ionizer-specs__media img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border);
+  background: var(--color-accent-soft);
+}
+
+@media (max-width: 1024px) {
+  .ionization-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .ionizer-specs {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-8);
+  }
+  .ionizer-specs__media {
+    max-width: 520px;
+  }
+}
+
+@media (max-width: 560px) {
+  .ionization-steps {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

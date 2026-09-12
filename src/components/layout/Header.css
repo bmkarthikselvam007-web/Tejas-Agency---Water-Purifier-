@@ -1,0 +1,388 @@
+/* ============================================================
+   Header shell
+   ============================================================ */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: saturate(180%) blur(8px);
+  border-bottom: 1px solid var(--color-border);
+  transition: box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.site-header--scrolled {
+  box-shadow: var(--shadow-sm);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  height: var(--header-height);
+}
+
+.site-header__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-shrink: 0;
+  border-radius: var(--radius-sm);
+}
+
+.site-header__logo {
+  width: auto;
+  height: 46px;
+  flex-shrink: 0;
+}
+
+.site-header__brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+  padding-left: var(--space-3);
+  border-left: 1px solid var(--color-border);
+}
+
+.site-header__brand-name {
+  font-size: 1.0625rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--color-navy);
+}
+
+.site-header__brand-tagline {
+  margin-top: 3px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.site-header__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-left: auto;
+}
+
+.site-header__ctas {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.site-header__menu-button {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  background: var(--color-surface-soft);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-navy);
+}
+
+.site-header__menu-button:hover {
+  background: var(--color-primary-soft);
+  border-color: var(--color-primary);
+}
+
+/* ============================================================
+   Desktop navigation
+   ============================================================ */
+.desktop-nav__list {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.desktop-nav__item {
+  position: relative;
+}
+
+.desktop-nav__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 9px 12px;
+  border: 0;
+  background: none;
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.desktop-nav__link:hover {
+  background: var(--color-primary-softer);
+  color: var(--color-primary-dark);
+}
+
+.desktop-nav__link--active {
+  color: var(--color-primary-dark);
+  background: var(--color-primary-soft);
+}
+
+.desktop-nav__chevron {
+  transition: transform var(--transition-fast);
+}
+
+.desktop-nav__trigger[aria-expanded="true"] .desktop-nav__chevron {
+  transform: rotate(180deg);
+}
+
+.desktop-nav__menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  z-index: var(--z-dropdown);
+  min-width: 290px;
+  padding: var(--space-2);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  animation: fadeUp var(--transition-fast) both;
+}
+
+.desktop-nav__menu::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  height: 10px;
+}
+
+.desktop-nav__menu-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.desktop-nav__menu-link {
+  display: block;
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  transition: background-color var(--transition-fast);
+}
+
+.desktop-nav__menu-link:hover {
+  background: var(--color-primary-softer);
+}
+
+.desktop-nav__menu-label {
+  display: block;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-text-strong);
+}
+
+.desktop-nav__menu-description {
+  display: block;
+  margin-top: 2px;
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+}
+
+/* ============================================================
+   Mobile drawer
+   ============================================================ */
+.mobile-nav__overlay {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-drawer);
+  background: var(--color-overlay);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-base);
+}
+
+.mobile-nav__overlay--visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: calc(var(--z-drawer) + 1);
+  display: flex;
+  flex-direction: column;
+  width: min(86vw, 340px);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-lg);
+  transform: translateX(100%);
+  transition: transform var(--transition-base);
+}
+
+.mobile-nav--open {
+  transform: translateX(0);
+}
+
+.mobile-nav__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-5);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.mobile-nav__title {
+  font-weight: 700;
+  color: var(--color-text-strong);
+}
+
+.mobile-nav__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--color-surface-soft);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-navy);
+}
+
+.mobile-nav__body {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-3) var(--space-3) var(--space-5);
+}
+
+.mobile-nav__list,
+.mobile-nav__sublist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mobile-nav__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--space-4);
+  background: none;
+  border: 0;
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  font-size: var(--text-base);
+  font-weight: 600;
+  text-align: left;
+}
+
+.mobile-nav__link:hover,
+.mobile-nav__link--active {
+  background: var(--color-primary-soft);
+  color: var(--color-primary-dark);
+}
+
+.mobile-nav__chevron {
+  transition: transform var(--transition-fast);
+  color: var(--color-primary);
+}
+
+.mobile-nav__chevron--open {
+  transform: rotate(180deg);
+}
+
+.mobile-nav__sublist {
+  padding-left: var(--space-3);
+  margin-bottom: var(--space-2);
+  border-left: 2px solid var(--color-border);
+}
+
+.mobile-nav__sublink {
+  display: block;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  color: var(--color-muted);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.mobile-nav__sublink:hover {
+  background: var(--color-primary-softer);
+  color: var(--color-primary-dark);
+}
+
+.mobile-nav__footer {
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-5);
+  border-top: 1px solid var(--color-border);
+  background: var(--color-surface-soft);
+}
+
+.mobile-nav__meta {
+  margin: 0;
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+  text-align: center;
+  line-height: var(--leading-snug);
+}
+
+/* ============================================================
+   Responsive switches
+   ============================================================ */
+@media (max-width: 1240px) {
+  .desktop-nav__link {
+    padding: 9px 9px;
+    font-size: 0.8125rem;
+  }
+  .site-header__brand-text {
+    display: none;
+  }
+  .site-header__cta-call {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .desktop-nav,
+  .site-header__ctas {
+    display: none;
+  }
+  .site-header__menu-button {
+    display: inline-flex;
+  }
+}
+
+@media (min-width: 1025px) {
+  .mobile-nav,
+  .mobile-nav__overlay {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .site-header__brand-text {
+    display: flex;
+  }
+}
+
+@media (max-width: 420px) {
+  .site-header__logo {
+    height: 38px;
+  }
+  .site-header__brand-name {
+    font-size: 0.9375rem;
+  }
+  .site-header__brand-tagline {
+    font-size: 9px;
+  }
+}
