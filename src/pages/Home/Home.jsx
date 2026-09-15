@@ -10,6 +10,7 @@ import {
   WhyChooseUs,
 } from "../../components/home/HomeSections";
 import FaqSection from "../../components/faq/FaqSection";
+import TechShowcase from "../../components/home/TechShowcase";
 import { useAsyncData } from "../../hooks/useAsyncData";
 import { useDocumentMeta } from "../../hooks/useDocumentMeta";
 import { getCategories } from "../../services/categoryService";
@@ -52,6 +53,8 @@ export default function Home() {
         error={featured.error}
         onRetry={featured.reload}
       />
+
+      <TechShowcase />
 
       <WhyChooseUs />
 
