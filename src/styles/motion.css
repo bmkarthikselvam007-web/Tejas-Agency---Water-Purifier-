@@ -1,0 +1,111 @@
+/**
+ * Tejas Agency — scroll motion
+ *
+ * Reveal-on-scroll primitives driven by IntersectionObserver (see
+ * hooks/useScrollReveal.js). Only `opacity` and `transform` animate, so every
+ * reveal stays on the compositor and off the layout path.
+ *
+ * Everything here collapses to a plain, instant page under
+ * `prefers-reduced-motion: reduce` (see the block at the end of this file).
+ */
+
+:root {
+  --reveal-duration: 620ms;
+  --reveal-ease: cubic-bezier(0.16, 1, 0.3, 1); /* soft decelerating arrival */
+  --reveal-shift: 18px;
+  --reveal-stagger: 70ms;
+}
+
+/* ============================================================
+   Single element reveal
+   ============================================================ */
+.reveal {
+  opacity: 0;
+  transform: translate3d(0, var(--reveal-shift), 0);
+  transition:
+    opacity var(--reveal-duration) var(--reveal-ease),
+    transform var(--reveal-duration) var(--reveal-ease);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+  will-change: auto;
+}
+
+/* ============================================================
+   Staggered group — direct children arrive in sequence
+   ============================================================ */
+.reveal-group > * {
+  opacity: 0;
+  transform: translate3d(0, var(--reveal-shift), 0);
+  transition:
+    opacity var(--reveal-duration) var(--reveal-ease),
+    transform var(--reveal-duration) var(--reveal-ease);
+  will-change: opacity, transform;
+}
+
+.reveal-group.is-visible > * {
+  opacity: 1;
+  transform: none;
+  will-change: auto;
+}
+
+/* CSS cannot derive a delay from the child index, so the scale is written out.
+   Anything past the ninth child shares the last step rather than drifting
+   further behind the fold. */
+.reveal-group.is-visible > *:nth-child(1) { transition-delay: 0ms; }
+.reveal-group.is-visible > *:nth-child(2) { transition-delay: calc(var(--reveal-stagger) * 1); }
+.reveal-group.is-visible > *:nth-child(3) { transition-delay: calc(var(--reveal-stagger) * 2); }
+.reveal-group.is-visible > *:nth-child(4) { transition-delay: calc(var(--reveal-stagger) * 3); }
+.reveal-group.is-visible > *:nth-child(5) { transition-delay: calc(var(--reveal-stagger) * 4); }
+.reveal-group.is-visible > *:nth-child(6) { transition-delay: calc(var(--reveal-stagger) * 5); }
+.reveal-group.is-visible > *:nth-child(7) { transition-delay: calc(var(--reveal-stagger) * 6); }
+.reveal-group.is-visible > *:nth-child(8) { transition-delay: calc(var(--reveal-stagger) * 7); }
+.reveal-group.is-visible > *:nth-child(n + 9) { transition-delay: calc(var(--reveal-stagger) * 8); }
+
+/* ============================================================
+   Hero entrance — plays on load, not on scroll
+   ============================================================ */
+@keyframes heroRise {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.hero-rise {
+  animation: heroRise 720ms var(--reveal-ease) both;
+  animation-delay: var(--hero-delay, 0ms);
+}
+
+/* ============================================================
+   Anchor targets clear the sticky header
+   ============================================================ */
+:target,
+[id] {
+  scroll-margin-top: calc(var(--header-height) + var(--space-4));
+}
+
+/* ============================================================
+   Reduced motion — show everything, move nothing
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-group > * {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    will-change: auto;
+  }
+
+  .hero-rise {
+    animation: none;
+  }
+}
